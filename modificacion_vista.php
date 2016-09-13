@@ -69,27 +69,27 @@ if (!array_key_exists('UPDATE', $_SESSION)) {
                         <div class="panel-footer">
                             <ul class="list-group">
                                 <div class="form-group">
-                                    <div class="col-sm-10"><input type="hidden" name="id" value="<?php echo $id_cliente; ?>"></div>
+                                    <div class="col-sm-4"><input class="form-control" type="hidden" name="id" value="<?php echo $id_cliente; ?>"></div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="nombre">Nombre : </label>
-                                    <div class="col-sm-10"> <input name="nombre" type="text" value="<?php echo $results['nombre'] ?>"/></div>
+                                    <div class="col-sm-4"> <input class="form-control" name="nombre" type="text" value="<?php echo $results['nombre'] ?>"/></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="apellido">Apellido : </label>
-                                    <div class="col-sm-10"> <input name="apellido" type="text" value="<?php echo $results['apellido'] ?>"/></div>
+                                    <div class="col-sm-4"> <input class="form-control" name="apellido" type="text" value="<?php echo $results['apellido'] ?>"/></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="fecha_nacimiento">Fecha de Nacimiento : </label><br/>
-                                    <div class="col-sm-10"><input name="fecha_nacimiento" type="text" id="datepicker" value="<?php echo $results['fecha_nacimiento'] ?>"></div>
+                                    <div class="col-sm-4"><input class="form-control" name="fecha_nacimiento" type="text" id="datepicker" value="<?php echo $results['fecha_nacimiento'] ?>"></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="nacionalidad">Nacionalidad : </label>
-                                    <div class="col-sm-10">
-                                        <select id="nacionalidad" name="nacionalidad">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="nacionalidad" name="nacionalidad">
                                             <optgroup>
                                                 <option value="<?php echo $results['id_nacionalidad']; ?>" selected><?php echo $results['nacionalidad']; ?></option>
                                             </optgroup>
@@ -104,8 +104,8 @@ if (!array_key_exists('UPDATE', $_SESSION)) {
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="Activo">Activo : </label>
-                                    <div class="col-sm-10">
-                                        <select name="activo">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" name="activo">
                                             <?php if ($results['activo']): ?>
                                                 <option value="1" selected>activo</option>
                                                 <option value="0">no activo</option>

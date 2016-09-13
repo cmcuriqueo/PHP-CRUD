@@ -68,22 +68,22 @@ require __DIR__ . '/controller/control_session.php';
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="nombre">Nombre : </label>
-                                    <div class="col-sm-10"> <input name="nombre" type="text" > </div>
+                                    <div class="col-sm-4"> <input class="form-control" name="nombre" type="text" > </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="apellido">Apellido : </label>
-                                    <div class="col-sm-10"> <input name="apellido" type="text"> </div>
+                                    <div class="col-sm-4"> <input class="form-control" name="apellido" type="text"> </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="fecha_nacimiento">Fecha de Nacimiento : </label>
-                                    <div class="col-sm-10"><input name="fecha_nacimiento" type="text" id="datepicker"></div>
+                                    <div class="col-sm-4"><input class="form-control" name="fecha_nacimiento" type="text" id="datepicker"></div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="nacionalidad">Nacionalidad : </label>
-                                    <div class="col-sm-10">
-                                        <select id="nacionalidad" name="nacionalidad">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="nacionalidad" name="nacionalidad">
                                             <option value="0">nacionalidad</option>
                                             <!--<option selected></option>-->
                                             <?php foreach ($nacionalidades as $value): ?>

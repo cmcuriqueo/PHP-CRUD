@@ -6,7 +6,7 @@ function getConnection(){
     
 
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=clientes_db', 'root', '');
+        $pdo = new PDO('mysql:host=localhost;dbname=clientes_db', 'clientes_app', '27qNxpPp4uNbFy58');
 
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -28,7 +28,7 @@ function getConnectionUser(){
     
 
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=usuario', 'root', '');
+        $pdo = new PDO('mysql:host=localhost;dbname=usuario', 'clientes_app', '27qNxpPp4uNbFy58');
 
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

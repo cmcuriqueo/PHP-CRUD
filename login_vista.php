@@ -30,12 +30,12 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="nombre">Nombre </label>
-                                    <div class="col-sm-10"> <input name="nombre" type="text" > </div>
+                                    <div class="col-sm-4"> <input class="form-control" name="nombre" type="text" > </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="contrasenia">Contraseña </label>
-                                    <div class="col-sm-10"> <input name="contrasenia" type="password"> </div>
+                                    <div class="col-sm-4"> <input class="form-control" name="contrasenia" type="password"> </div>
                                 </div> 
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">

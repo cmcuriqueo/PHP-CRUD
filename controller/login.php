@@ -90,7 +90,7 @@
                 }
                 $results = NULL;
                 
-                $sql = "SELECT permiso.descripcion FROM permiso JOIN permiso_usuario ON permiso.id = permiso_usuario.id_permiso JOIN usuario ON usuario.id = permiso_usuario.id_usuario WHERE usuario.id = 1";
+                $sql = "SELECT permiso.descripcion FROM permiso JOIN permiso_usuario ON permiso.id = permiso_usuario.id_permiso JOIN usuario ON usuario.id = permiso_usuario.id_usuario WHERE usuario.id = :id";
                  $stmt = $pdo->prepare($sql);
                 $stmt->setFetchMode(PDO::FETCH_ASSOC); //podria ser PDO::FETCH_OBJ
 
