@@ -1,7 +1,13 @@
     <?php
+        require __DIR__ . '/controller/control_session.php';
+        //si no tiene permiso de vista
+        if (!array_key_exists('SELECT', $_SESSION)) {
+            header('Location: sin_permiso.php');
+            die();
+        }
         require __DIR__ . '/header.php';
         require __DIR__ . '/controller/clientes.php';
-        require __DIR__ . '/controller/control_session.php';
+        
         if(!array_key_exists('contador', $_SESSION )){
             $_SESSION['contador'] = 0;
         }

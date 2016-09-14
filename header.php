@@ -13,4 +13,4 @@
         <script type="text/javascript" src="<?php echo $bower; ?>/jquery-validation/dist/jquery.validate.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo $bower; ?>/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo $bower; ?>/jquery-ui/themes/base/jquery-ui.min.css"/>
-
+        <style>label.error{ color: red; }</style>

@@ -1,10 +1,11 @@
 <?php
-require __DIR__ . '/header.php';
-require_once __DIR__ . '/controller/nacionalidades_controller.php';
+require __DIR__ . '/controller/control_session.php';
 if (!array_key_exists('UPDATE', $_SESSION)) {
-    header('Location: ../denegado.php');
+    header('Location: denegado.php');
     die();
 }
+require_once __DIR__ . '/controller/nacionalidades_controller.php';
+require __DIR__ . '/header.php';
 ?>
     <title>Modificación</title>
     <script type="text/javascript" src="<?php echo $bower; ?>/jquery-validation/jquery.ui.datepicker.validation.min.js"></script>

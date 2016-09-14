@@ -74,10 +74,12 @@
 
                 $stmt->execute();
                 $results = $stmt->fetchAll();
-                
                 //permisos de roleres del usuario
                 foreach ($results as  $value) { 
-                    echo $value['descripcion'].'<br/>';
+                    //echo $value['descripcion'].'<br/>';
+                    if( strcmp($value['descripcion'], 'SELECT') == 0){
+                        $_SESSION['SELECT'] = true;
+                    }
                     if( strcmp($value['descripcion'], 'INSERT') == 0){
                         $_SESSION['INSERT'] = true;
                     }
@@ -88,6 +90,7 @@
                         $_SESSION['UPDATE'] = true;
                     }
                 }
+                
                 $results = NULL;
                 
                 $sql = "SELECT permiso.descripcion FROM permiso JOIN permiso_usuario ON permiso.id = permiso_usuario.id_permiso JOIN usuario ON usuario.id = permiso_usuario.id_usuario WHERE usuario.id = :id";
@@ -100,7 +103,10 @@
                 $results = $stmt->fetchAll();
                 //permisos del usuario
                 foreach ($results as  $value) {
-                    echo $value['descripcion'].'<br/>';
+                    //echo $value['descripcion'].'<br/>';
+                    if( strcmp($value['descripcion'], 'SELECT') == 0){
+                        $_SESSION['SELECT'] = true;
+                    }
                     if( strcmp($value['descripcion'], 'INSERT') == 0){
                         $_SESSION['INSERT'] = true;
                     }
@@ -111,7 +117,6 @@
                         $_SESSION['UPDATE'] = true;
                     }
                 }
-                
                 //redireccion a index
                 header('Location: ../index.php');
                 die();

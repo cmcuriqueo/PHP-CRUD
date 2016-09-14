@@ -1,6 +1,7 @@
 <?php
-
+require __DIR__ . '/controller/control_session.php';
 require __DIR__ . '/header.php';
+require_once __DIR__.'/BaseVistas.php';
 ?>
 <title>Permiso Denegado</title>
 
@@ -15,4 +16,4 @@ require __DIR__ . '/header.php';
     <?php
 
     require __DIR__ . '/footer.php';
-    ?>
+ 

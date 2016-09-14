@@ -1,7 +1,8 @@
 <?php
+require __DIR__ . '/controller/control_session.php';
 require __DIR__ . '/header.php';
 require __DIR__ . '/controller/nacionalidades_controller.php';
-require __DIR__ . '/controller/control_session.php';
+
 ?>
     <title>Alta</title>
     <script type="text/javascript" src="<?php echo $bower; ?>/jquery-validation/jquery.ui.datepicker.validation.min.js"></script>
