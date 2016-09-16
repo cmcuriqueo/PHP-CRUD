@@ -1,4 +1,4 @@
-<?php require __DIR__ . '/header.php';  ?>
+<?php require_once __DIR__ . '/header.php';  ?>
     <title>Login</title>
     <script type="text/javascript">
         $().ready(function () {

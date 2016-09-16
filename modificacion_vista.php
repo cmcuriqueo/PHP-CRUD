@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/controller/control_session.php';
+require_once __DIR__ . '/controller/control_session.php';
 if (!array_key_exists('UPDATE', $_SESSION)) {
     header('Location: denegado.php');
     die();

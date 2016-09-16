@@ -1,11 +1,12 @@
 <?php
-   require __DIR__."/BaseVistas.php";
+   require_once __DIR__."/BaseVistas.php";
 ?>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta charset="UTF-8">         
+        <meta charset="UTF-8">     
+        <link rel="shortcut icon" href="<?php echo $bower; ?>/avatar.png" />
         <script type="text/javascript" src="<?php echo $bower; ?>/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo $bower; ?>/funciones.js"></script>
         <script type="text/javascript" src="<?php echo $bower; ?>/bootstrap/dist/js/bootstrap.js"></script>

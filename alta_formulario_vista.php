@@ -1,7 +1,7 @@
 <?php
-require __DIR__ . '/controller/control_session.php';
-require __DIR__ . '/header.php';
-require __DIR__ . '/controller/nacionalidades_controller.php';
+require_once __DIR__ . '/controller/control_session.php';
+require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/controller/nacionalidades_controller.php';
 
 ?>
     <title>Alta</title>

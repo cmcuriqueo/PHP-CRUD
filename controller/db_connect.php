@@ -14,7 +14,9 @@ function getConnection(){
         
         return $pdo;
     } catch (PDOException $ex) {
-        error_log('Error de conexion de la DB: ' . $ex->getMessage(), 3, "../errors.log");
+        error_log('Error de conexion de la DB: ' . $ex->getMessage().'\n', 3, "../errors.log");
+        header('Location: ../500.html');
+        die();
         throw new Exception('Error de conexion de la DB: ' . $ex->getMessage());
     }
 }
@@ -36,7 +38,9 @@ function getConnectionUser(){
         
         return $pdo;
     } catch (PDOException $ex) {
-        error_log('Error de conexion de la DB: ' . $ex->getMessage(), 3, "../errors.log");
+        error_log('Error de conexion de la DB: ' . $ex->getMessage().'\n', 3, "../errors.log");
+        header('Location: ../500.html');
+        die();
         throw new Exception('Error de conexion de la DB: ' . $ex->getMessage());
     }
 }

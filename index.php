@@ -1,12 +1,13 @@
     <?php
-        require __DIR__ . '/controller/control_session.php';
+        require_once __DIR__ . '/controller/control_session.php';
+        require_once __DIR__ . '/BaseVistas.php';
         //si no tiene permiso de vista
         if (!array_key_exists('SELECT', $_SESSION)) {
             header('Location: sin_permiso.php');
             die();
         }
-        require __DIR__ . '/header.php';
-        require __DIR__ . '/controller/clientes.php';
+        require_once __DIR__ . '/header.php';
+        require_once __DIR__ . '/controller/clientes.php';
         
         if(!array_key_exists('contador', $_SESSION )){
             $_SESSION['contador'] = 0;
@@ -30,7 +31,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Logotipo</a>
+                <a class="navbar-brand" href="../index.php"><img src="<?php echo $bower; ?>/avatar.png"></a>
               </div>
               <!-- Agrupar los enlaces de navegación, los formularios y cualquier
                    otro elemento que se pueda ocultar al minimizar la barra -->
@@ -43,12 +44,14 @@
                     <ul class="dropdown-menu">
                       <li>
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                             <span class="glyphicon glyphicon-user"></span>
-                            <?php
-                              if(array_key_exists('nombre_usuario', $_SESSION)) {
-                                echo $_SESSION['nombre_usuario'];
-                              }
-                            ?>
+                            <a href="<?php echo $controller.'/perfil_controller.php';?>">
+                               <span class="glyphicon glyphicon-user"></span>
+                              <?php
+                                if(array_key_exists('nombre_usuario', $_SESSION)) {
+                                  echo $_SESSION['nombre_usuario'];
+                                }
+                              ?>
+                            </a>
                           </a>
                       </li>
                       <li class="divider"></li>
