@@ -1,6 +1,6 @@
     <?php
         require_once __DIR__ . '/controller/control_session.php';
-        require_once __DIR__ . '/BaseVistas.php';
+        require_once __DIR__ . '/base_vistas.php';
         //si no tiene permiso de vista
         if (!array_key_exists('SELECT', $_SESSION)) {
             header('Location: sin_permiso.php');
