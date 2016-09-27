@@ -1,5 +1,5 @@
 # PrimerTrabajoPhp
-##SQL de prueba
+##Base de datos de prueba
 ###Base de datos de clientes
 ```
 
